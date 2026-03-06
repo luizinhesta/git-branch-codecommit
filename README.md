@@ -1,6 +1,6 @@
 # 🚀 Projeto AWS CodeCommit + Git Branch + Pipeline para S3
 
-![HTTP Status Code](Imagem/imagem(1).jpg)
+![HTTP Status Code](imagem/imagem(1).jpg)
 
 Este projeto demonstra na prática a utilização de **Git com AWS
 CodeCommit**, utilizando **branches para desenvolvimento de
@@ -16,7 +16,7 @@ desenvolvimento, onde novas funcionalidades são desenvolvidas em
 
 # 🏗️ Infraestrutura
 
-![HTTP Status Code](Imagem/imagem(2).png)
+![HTTP Status Code](imagem/imagem(2).png)
 
 A arquitetura do projeto utiliza os seguintes serviços da AWS:
 
@@ -76,11 +76,11 @@ Fluxo de trabalho:
 > da infraestrutura e das implementações realizadas.
 
   ---------------------------- -------------------------------- ----------------------------
-  ![](Imagem/imagem(3).png)   ![](Imagem/imagem(4).png)       ![](Imagem/imagem(5).png)
+  ![](imagem/imagem(3).png)   ![](imagem/imagem(4).png)       ![](imagem/imagem(5).png)
 
-  ![](Imagem/imagem(6).png)   ![](Imagem/imagem(7).png)       ![](Imagem/imagem(8).png)
+  ![](imagem/imagem(6).png)   ![](imagem/imagem(7).png)       ![](imagem/imagem(8).png)
 
-  ![](Imagem/imagem(9).png)   ![](Imagem/imagem(10).png)       
+  ![](imagem/imagem(9).png)   ![](imagem/imagem(10).png)       
   ---------------------------- -------------------------------- ----------------------------
 
 ------------------------------------------------------------------------
