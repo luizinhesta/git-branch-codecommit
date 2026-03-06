@@ -45,53 +45,95 @@ Fluxo de funcionamento:
 
 ------------------------------------------------------------------------
 
-# 🌿 Fluxo de Branches
+# 🌿 Fluxo de Branches Utilizado
 
-Durante o projeto foram utilizadas diferentes branches para organizar o
-desenvolvimento:
+Durante o desenvolvimento do projeto foram utilizadas três branches
+principais:
 
 -   **master**
-    -   Branch principal utilizada para produção
-    -   Dispara o pipeline para publicação no S3
--   **projetos**
-    -   Branch utilizada para adicionar a seção de projetos no site
--   **contatos**
-    -   Branch utilizada para adicionar a seção de contatos
-
-Fluxo de trabalho:
-
-    master
-       │
-       ├── projetos
-       │       └── merge → master
-       │
-       └── contatos
-               └── merge → master
+    -   Branch principal responsável pelo deploy em produção
+    -   Integração direta com o pipeline para publicação no S3
+-   **dev**
+    -   Utilizada para desenvolvimento de funcionalidades iniciais
+-   **dev2**
+    -   Utilizada para desenvolvimento de novas melhorias no projeto
 
 ------------------------------------------------------------------------
 
-## 🖼️ Galeria de Imagens do Projeto
+# 🔄 Etapas de Integração das Branches
 
-> Nesta seção estão algumas imagens do projeto mostrando o funcionamento
-> da infraestrutura e das implementações realizadas.
+Durante o projeto foram realizadas três formas diferentes de integração
+de código.
 
-  ---------------------------- -------------------------------- ----------------------------
-  ![](imagem/imagem(3).png)   ![](imagem/imagem(4).png)       ![](imagem/imagem(5).png)
+### 1️⃣ Merge local utilizando Git
 
-  ![](imagem/imagem(6).png)   ![](imagem/imagem(7).png)       ![](imagem/imagem(8).png)
+A primeira etapa consistiu em realizar o **merge da branch dev para a
+master diretamente no Git local**, utilizando os comandos tradicionais
+do Git.
 
-  ![](imagem/imagem(9).png)   ![](imagem/imagem(10).png)       
-  ---------------------------- -------------------------------- ----------------------------
+Fluxo:
+
+    dev → merge local → master
+
+------------------------------------------------------------------------
+
+### 2️⃣ Pull Request no AWS CodeCommit
+
+Na segunda etapa foi realizada uma **solicitação de pull (Pull
+Request)** no **AWS CodeCommit**, integrando:
+
+    dev → Pull Request → master
+
+Essa etapa demonstra o fluxo comum utilizado em equipes de
+desenvolvimento.
+
+------------------------------------------------------------------------
+
+### 3️⃣ Pull Request da branch dev2
+
+Na terceira etapa foi realizado outro processo de integração utilizando
+o CodeCommit:
+
+    dev2 → Pull Request → master
+
+Com isso foi possível demonstrar diferentes formas de integração de
+código utilizando Git e CodeCommit.
+
+------------------------------------------------------------------------
+
+# 🖼️ Galeria de Imagens do Projeto
+
+> Nesta seção estão imagens demonstrando o funcionamento do projeto,
+> infraestrutura e fluxo de desenvolvimento.
+
+
+
+<p align="center">
+  <img src="imagem/imagem(3).png" width="30%" />
+  <img src="imagem/imagem(4).png" width="30%" />
+  <img src="imagem/imagem(5).png" width="30%" />
+</p>
+
+<p align="center">
+  <img src="imagem/imagem(6).png" width="30%" />
+  <img src="imagem/imagem(7).png" width="30%" />
+  <img src="imagem/imagem(8).png" width="30%" />
+</p>
+
+<p align="center">
+  <img src="imagem/imagem(9).png" width="30%" />
+  <img src="imagem/imagem(10).png" width="30%" />
+</p>
 
 ------------------------------------------------------------------------
 
 # ⚙️ Tecnologias Utilizadas
 
--   AWS CodeCommit
--   AWS CodePipeline
--   Amazon S3
--   Git
--   HTML
+-   AWS CodeCommit\
+-   AWS CodePipeline\
+-   Amazon S3\
+-   Git\
+-   HTML\
 -   CSS
 
 ------------------------------------------------------------------------
@@ -111,3 +153,16 @@ Fluxo de trabalho:
 **Luiz Augusto**
 
 Infrastructure • Cloud • Monitoring 🚀
+
+------------------------------------------------------------------------
+
+## 📌 Sobre este projeto
+
+Este projeto foi desenvolvido com o objetivo de demonstrar na prática:
+
+-   Utilização de **Git com múltiplas branches**
+-   Estratégias de **merge local e pull request**
+-   Integração entre **Git e AWS CodeCommit**
+-   Automação de deploy utilizando **AWS CodePipeline**
+-   Publicação de **site estático no Amazon S3**
+-   Simulação de fluxo de desenvolvimento utilizado em ambientes DevOps
